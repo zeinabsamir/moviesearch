@@ -1,0 +1,30 @@
+<h1>Need a movie?</h1>
+<p class="leed">Use the movie app to browse and find your favorite movie... </p>
+<form>
+  <div class="form-group">
+     <input type="text" #myInputText name="searchStr" class="form-control" placeholder="Search  movie..." [(ngModel)]="searchStr" (keyup)="searchMovie()">
+  </div>
+</form>
+<div *ngIf="!searchRes">
+  <div class="row">
+    <div *ngFor="let movie of movies">
+            <div class="col-md-3 ">
+                <div class="movie">
+                  <a [routerLink]="'movie/'+movie.imdbID" > <img src={{movie.Poster}}> </a>
+                  <h4 class="title">{{movie.Title}}</h4>
+                  
+                  <a [routerLink]="'movie/'+movie.imdbID" class="btn btn-primary button">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="searchRes">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="movie">
+              <a [routerLink]="'movie/'+searchRes.imdbID" > <img src={{searchRes.Poster}}> </a>
+          </div>
+      </div>
+    </div>
+</div>

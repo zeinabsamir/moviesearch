@@ -1,0 +1,15 @@
+.movie {
+   background-color: rgb(39, 39, 44);
+    padding: 20px;
+    margin:10px 0px;
+    width:350px;
+    height: 600px
+}
+.title {
+    text-align: center;
+    color: rgb(196, 33, 33);
+    padding: 10px;
+}
+.button {
+   margin: 5px 90px;
+}

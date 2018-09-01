@@ -1,0 +1,22 @@
+<div *ngIf="movieDetails"> 
+    <header class="movie-header">
+       <div class="row">
+           <div class="col-md-4">
+                <div *ngIf="movieDetails.Poster">
+                    <img class="details-thumb" src={{movieDetails.Poster}}>
+                    <h1 class="title">{{movieDetails.Title}}</h1>
+                    <p class="date"><span>{{movieDetails.Year}}</span></p> 
+                </div>
+           </div>
+           <div class="col-md-8">
+                <h2 class="text">Genre:</h2><h4>{{movieDetails.Genre}}</h4>
+                <h2 class="text">Actors:</h2><h4>{{movieDetails.Actors}}</h4>
+                <h2 class="text">Director:</h2><h4>{{movieDetails.Director}}</h4>    
+                <h2 class="text">Awards:</h2><h4>{{movieDetails.Awards}}</h4>
+                <h2 class="text">imdbRating:</h2><h4>{{movieDetails.imdbRating}}</h4>
+                <h2 class="text">Story about:</h2><h4>{{movieDetails.Plot}}</h4>
+                 
+           </div>
+          </div> 
+    </header>    
+</div>
